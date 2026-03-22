@@ -1,11 +1,12 @@
 package com.ankit.TripEase;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
 
 
 @NoArgsConstructor
@@ -20,4 +21,8 @@ public class Customer {
     private  int age;
     private String emailId;
     private Gender gender;
+
+    @OneToMany(cascade = CascadeType.ALL)
+            @JoinColumn(name = "customer_id")
+    ArrayList<Booking> bookings = new ArrayList<>();
 }

@@ -1,11 +1,13 @@
 package com.ankit.TripEase;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.extern.apachecommons.CommonsLog;
+
+import java.util.ArrayList;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,10 +15,20 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Driver {
-    @Id 
+    @Id
     private int driverID;
+
+    @Column(name ="name")
     private String name;
     private  int age;
     private String emailId;
     private Gender gender;
+
+    @OneToMany(cascade = CascadeType.ALL)
+            @JoinColumn(name = "driver_id")
+    ArrayList<Booking> bookings = new ArrayList<>();
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "cab_id")
+    Cab cab;
 }
