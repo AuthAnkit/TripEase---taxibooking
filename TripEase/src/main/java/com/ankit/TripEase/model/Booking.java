@@ -1,10 +1,9 @@
-package com.ankit.TripEase;
+package com.ankit.TripEase.model;
 
 
+import com.ankit.TripEase.Enum.status;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinColumns;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

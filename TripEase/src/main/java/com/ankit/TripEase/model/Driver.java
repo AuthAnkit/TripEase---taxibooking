@@ -1,11 +1,11 @@
-package com.ankit.TripEase;
+package com.ankit.TripEase.model;
 
+import com.ankit.TripEase.Enum.Gender;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.extern.apachecommons.CommonsLog;
 
 import java.util.ArrayList;
 

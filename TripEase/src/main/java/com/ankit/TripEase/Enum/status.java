@@ -1,4 +1,4 @@
-package com.ankit.TripEase;
+package com.ankit.TripEase.Enum;
 
 public enum status {
     completed ,
