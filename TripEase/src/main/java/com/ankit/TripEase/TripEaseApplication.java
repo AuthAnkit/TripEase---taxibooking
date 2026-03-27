@@ -9,5 +9,5 @@ public class TripEaseApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TripEaseApplication.class, args);
 	}
-	//HI
+
 }
