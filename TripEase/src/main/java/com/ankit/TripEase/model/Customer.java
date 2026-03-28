@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 @NoArgsConstructor
@@ -17,13 +18,15 @@ import java.util.ArrayList;
 @Entity
 public class Customer {
     @Id
-    private int customerID;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer customerID;
     private String name;
     private  int age;
     private String emailId;
+    @Enumerated(EnumType.STRING)
     private Gender gender;
 
     @OneToMany(cascade = CascadeType.ALL)
-            @JoinColumn(name = "customer_id")
-    ArrayList<Booking> bookings = new ArrayList<>();
+    @JoinColumn(name = "customer_id")
+    List<Booking> bookings = new ArrayList<>();
 }

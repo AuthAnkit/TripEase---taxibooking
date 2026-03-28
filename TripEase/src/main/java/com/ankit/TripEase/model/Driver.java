@@ -16,6 +16,7 @@ import java.util.ArrayList;
 @Entity
 public class Driver {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int driverID;
 
     @Column(name ="name")

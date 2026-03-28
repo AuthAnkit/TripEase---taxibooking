@@ -2,7 +2,10 @@ package com.ankit.TripEase.repository;
 
 import com.ankit.TripEase.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+
+@Repository
 public interface CustomerRepositary extends JpaRepository<Customer, Integer> {
 
 }
