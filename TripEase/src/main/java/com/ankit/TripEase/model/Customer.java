@@ -20,6 +20,9 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer customerID;
+
+
+
     private String name;
     private  int age;
     private String emailId;

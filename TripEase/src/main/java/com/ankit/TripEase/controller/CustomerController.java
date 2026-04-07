@@ -1,6 +1,8 @@
 package com.ankit.TripEase.controller;
 
 
+import com.ankit.TripEase.dto.request.CustomerRequest;
+import com.ankit.TripEase.dto.response.CustomerResponse;
 import com.ankit.TripEase.model.Customer;
 import com.ankit.TripEase.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +15,8 @@ public class CustomerController {
     CustomerService customerService;
 
     @PostMapping("/add")
-    public Customer addCustomer(@RequestBody Customer customer) {
-        return customerService.addCustomer(customer);
+    public CustomerResponse addCustomer(@RequestBody CustomerRequest  customerRequest) {
+        return customerService.addCustomer(customerRequest);
     }
 
     @GetMapping("/get/customer-id/{id}")
