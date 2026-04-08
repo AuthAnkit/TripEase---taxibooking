@@ -38,11 +38,20 @@ public class CustomerService {
         return customerResponse;
     }
 
-    public Customer getCustomer(int customerId) {
-        Optional<Customer> getc =  customerRepositary.findById(customerId);
-        if(getc.isEmpty()){
+
+
+    public CustomerResponse getCustomer(int customerId) {
+
+        Optional<Customer> getCustomer =  customerRepositary.findById(customerId);
+        if(getCustomer.isEmpty()){
             throw new CustomerNotFoundException("Customer with id " + customerId + " not found");
         }
-        return getc.get();
+
+        Customer savedCustomer = getCustomer.get();
+        CustomerResponse customerResponse = new CustomerResponse();
+        customerResponse.setName(savedCustomer.getName());
+        customerResponse.setAge(savedCustomer.getAge());
+        customerResponse.setEmailId(savedCustomer.getEmailId());
+        return customerResponse;
     }
 }

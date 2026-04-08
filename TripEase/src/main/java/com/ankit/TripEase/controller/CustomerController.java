@@ -20,7 +20,8 @@ public class CustomerController {
     }
 
     @GetMapping("/get/customer-id/{id}")
-    public Customer getCustomer(@PathVariable("id") int CustomerId) {
+    public CustomerResponse getCustomer(@PathVariable("id") int CustomerId) {
+
         return customerService.getCustomer(CustomerId);
     }
 }
