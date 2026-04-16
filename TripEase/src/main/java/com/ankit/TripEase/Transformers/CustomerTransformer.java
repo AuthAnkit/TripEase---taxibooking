@@ -8,8 +8,8 @@ public class CustomerTransformer {
     public static Customer CustomerRequestToCustomer(CustomerRequest customerRequest) {
         Customer customer = Customer.builder().age(customerRequest.getAge())
                 .name(customerRequest.getName())
-                .emailId(customerRequest
-                .getEmailId())
+                .emailId(customerRequest.getEmailId())
+                .gender(customerRequest.getGender())
                 .build();
         return customer;
     }
