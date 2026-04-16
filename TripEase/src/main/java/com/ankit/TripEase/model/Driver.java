@@ -2,10 +2,7 @@ package com.ankit.TripEase.model;
 
 import com.ankit.TripEase.Enum.Gender;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 
@@ -14,6 +11,7 @@ import java.util.ArrayList;
 @Getter
 @Setter
 @Entity
+@Builder
 public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
