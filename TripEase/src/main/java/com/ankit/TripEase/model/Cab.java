@@ -12,6 +12,7 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
+@Builder
 public class Cab {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,4 +21,6 @@ public class Cab {
     private String cabModel;
     private double perKmRate;
     private boolean available;
+
+
 }
