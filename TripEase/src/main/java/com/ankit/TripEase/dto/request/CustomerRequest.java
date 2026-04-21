@@ -3,10 +3,7 @@ package com.ankit.TripEase.dto.request;
 import com.ankit.TripEase.Enum.Gender;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor

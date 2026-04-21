@@ -19,7 +19,7 @@ public class DriverController{
         return driverService.addDriver(driverRequest);
     }
 
-    @GetMapping("/getDriver/{id}")
+    @GetMapping("/getDriver/{driverId}")
     public DriverResponse getDriver(@PathVariable int driverId){
         return driverService.getDriver(driverId);
     }

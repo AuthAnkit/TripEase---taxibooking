@@ -4,7 +4,9 @@ import com.ankit.TripEase.Enum.Gender;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,12 +22,16 @@ public class Driver {
     @Column(name ="name")
     private String name;
     private  int age;
+
+    @Column(unique = true , nullable = false)
     private String emailId;
+
+    @Enumerated(EnumType.STRING)
     private Gender gender;
 
     @OneToMany(cascade = CascadeType.ALL)
             @JoinColumn(name = "driver_id")
-    ArrayList<Booking> bookings = new ArrayList<>();
+    List<Booking> bookings = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cab_id")

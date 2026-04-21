@@ -6,9 +6,11 @@ import com.ankit.TripEase.model.Driver;
 public class DriverTransformer {
 
     public static Driver DriverRequestToDriver(DriverRequest driverRequest){
-        Driver driver = Driver.builder().age(driverRequest.getAge()).name(driverRequest.getName())
-                .emailId(driverRequest
-                 .getEmailId()).build();
+        Driver driver = Driver.builder()
+                .age(driverRequest.getAge())
+                .name(driverRequest.getName())
+                .emailId(driverRequest.getEmailId())
+                .gender(driverRequest.getGender()).build();
         return driver;
     }
 
